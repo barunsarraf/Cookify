@@ -8,12 +8,13 @@
       "recipeName": "Momo",
       "cookingTime": "20min",
       "cuisine": "Indian",
-      "serves": 3,
+      "servesFor": 3,
       "price": "100",
       "comment":[],
-      "ratingList":[],
-      "courseType":"dinner",
-      "images": "../assets/homecomponentassets/images/image256.jpg",
+      "ratingduplicate":2.4,
+      "ratings":[],
+      "course":"dinner",
+      "recipeImage": "../assets/homecomponentassets/images/image256.jpg",
       "description": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
       "ingredients": [
         {

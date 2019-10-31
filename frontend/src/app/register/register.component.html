@@ -8,28 +8,19 @@
                     <form>
                     <div class="row">
                         <div class="col-5">
-                            <div>
-                                <mat-form-field class="example-full-width">
-                                    <input #name matInput placeholder="Name" name="name" [formControl]="nameFormControl"
-                                           [errorStateMatcher]="matcher">
-                                    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                                    <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
-                                      Please enter your name
-                                    </mat-error> -->
-                                    <mat-error *ngIf="nameFormControl.hasError('required')">
-                                      Name is <strong>required</strong>
-                                    </mat-error>
-                                  </mat-form-field>
-                                <!-- <input #name class="input--style-2" type="text" placeholder="Name" formControlName="name" name="name" required> -->
-                            </div>
+                            <mat-form-field class="example-full-width">
+                                <input #name matInput placeholder="Name" name="name" [formControl]="nameFormControl"
+                                        [errorStateMatcher]="matcher">
+                                <mat-error *ngIf="nameFormControl.hasError('required')">
+                                    Name is <strong>required</strong>
+                                </mat-error>
+                                </mat-form-field>
                         </div>
                         <div class="col-5">
                             
-                            <!-- <input #email class="input--style-2" type="text" placeholder="Email" formControlName="email" name="email" required> -->
                             <mat-form-field class="example-full-width">
                                 <input #email matInput placeholder="Email" [formControl]="emailFormControl"
                                         [errorStateMatcher]="matcher">
-                                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
                                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                                     Please enter a valid email address
                                 </mat-error>
@@ -43,15 +34,9 @@
                  
                     <div class="row">
                         <div class="col-5">
-                            <div>
-                                <!-- <input #username class="input--style-2" type="text" placeholder="UserName" formControlName="userName" name="UserName" required [pattern]="unamePattern"> -->
                                 <mat-form-field class="example-full-width">
                                     <input #username matInput placeholder="UserName" name="userName" [formControl]="userNameFormControl"
                                            [errorStateMatcher]="matcher">
-                                    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                                    <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
-                                      Please enter your name
-                                    </mat-error> -->
                                     <mat-error *ngIf="userNameFormControl.hasError('required')">
                                       Username is <strong>required</strong>
                                     </mat-error>
@@ -59,24 +44,15 @@
                                             Username can only contain <strong>alphanumerics, underscores and hyphen</strong>
                                           </mat-error>
                                   </mat-form-field>
-                            </div>
-                            
                         </div>
                         <div class="col-5">
-                            <div>
-                                    <mat-form-field class="example-full-width">
-                                            <input type="password" #password matInput placeholder="Password" name="password" [formControl]="passwordFormControl"
-                                                   [errorStateMatcher]="matcher">
-                                            <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                                            <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
-                                              Please enter your name
-                                            </mat-error> -->
-                                            <mat-error *ngIf="passwordFormControl.hasError('required')">
-                                              Password is <strong>required</strong>
-                                            </mat-error>
-                                          </mat-form-field>
-                                <!-- <input #password class="input--style-2" type="password" placeholder="Password" formControlName="password" name="Password" required> -->
-                            </div>
+                            <mat-form-field class="example-full-width">
+                                <input type="password" #password matInput placeholder="Password" name="password" [formControl]="passwordFormControl"
+                                        [errorStateMatcher]="matcher">
+                                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                    Password is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
                         </div>
                     </div>
                     <div class="row">

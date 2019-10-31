@@ -51,7 +51,7 @@ getallrecommendedrecipe():Observable<any>
 
 login(user:User)
 {
-  let _url="http://localhost:8080/userLogin/authenticate";
+  let _url="http://15.206.52.125:8080/userLogin/authenticate";
   return this.http.post<User>(_url,user,{observe:'response'});
 }
 
@@ -78,7 +78,7 @@ public submitfinalfavourites(obj:any):Observable<any>
 
  public postPublishRecipe(obj:any):Observable<any>
 {
-  let urlz="http://localhost:8082/api/v1/recipe";
+  let urlz="http://15.206.52.125:8082/api/v1/recipe";
   return this.http.post(urlz,obj);
 
 }
@@ -91,12 +91,12 @@ getRecipeDetails(id)
 getUserDetails(username)
 {
   console.log(username+" inside Service");
-  return this.http.get<any>("http://localhost:8111/api/v1/user/"+username)
+  return this.http.get<any>("http://15.206.52.125:8111/api/v1/user/"+username)
 }
 
 saveuserlikerecipe(recipeobj)
 {
-  let urlz="http://localhost:8111/api/v1/userlikerecipe/"+localStorage.getItem('username');
+  let urlz="http://15.206.52.125:8111/api/v1/userlikerecipe/"+localStorage.getItem('username');
   console.log(urlz,"inside save");
   return this.http.post(urlz,recipeobj);
 }
