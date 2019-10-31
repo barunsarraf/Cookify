@@ -1,0 +1,67 @@
+<div class="container-fluid " style="background: #eb4653;" >
+<div class="container-fluid" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-sm-6"> 
+            <img  src={{recipedetail.images}} width="100%" height="100%">
+        </div>     
+        <div class="col-sm-6">
+                <div class="card" style="height:100%">
+                       <div class="card-header" style="background: #434345;color:antiquewhite"></div>
+                        <div class="card-body" style="color:#eb4653">                              
+                            <p class="card-text" >Published By: {{recipedetail.publishedBy}}</p>
+                            <p class="card-text" >Duration: {{recipedetail.cookingTime}}</p>
+                            <p class="card-text" >Cuisine:{{recipedetail.cuisine}}</p>
+                            <p class="card-text" >Serve For:{{recipedetail.serves}}</p>
+                            <p class="card-text" >Price :{{recipedetail.price}}</p>
+                            
+                        </div>
+                 </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top: 5px;">
+<div class="row">
+    <div class="col-sm-12">
+            <div class="card text-white" >
+                    
+                    <div class="card-body" style="background: #eb4653" >
+                      <h5 class="card-title" style="color:#434345">{{recipedetail.recipeName}}</h5>
+                      <p class="card-text" >{{recipedetail.description}}</p>
+                      <a (click)="like(recipedetail)" class="card-link" style="color:#434345">Add To Favourites</a>
+                      <a (click)="navtopage(recipedetail.re)" class="card-link" style="color:#434345;cursor: pointer;">Try The Recipe</a>
+                      <a href="#" class="card-link" style="color:#434345">Go to Cooking</a>
+                    </div>
+            </div>           
+    </div>   
+</div>
+</div>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                     <div class="card-header" style="background: #434345 ; color:antiquewhite" >Ingredients</div>
+                            <div class="card-body" >                                 
+                                       <div class="container"><div class="row"><div class="col-sm-4" *ngFor="let view of recipedetail.ingredients"><div class="card" ><div class="card-body" style="text-align:center">  
+                                          <p class="card-text" style="color:#eb4653"> {{view.ingredient_used}} - {{view.Quantity}} </p>                                     
+                                       </div>  </div></div></div></div>
+
+                                    </div>                                  
+                            </div>
+                         </div>           
+          </div> 
+</div>
+        
+        <div class="container-fluid" style="margin-top: 5px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="card ">
+                                    <div class="card-header" style="background: #434345;color:antiquewhite">procedure</div>
+                                    <div class="card-body">                                      
+                                      <p class="card-text" *ngFor="let view of recipedetail.procedure" style="color:#eb4653">{{view.steps}}</p> 
+                                    </div>
+                              </div>           
+                        </div>   
+                    </div>
+                </div>
+</div>
+<router-outlet></router-outlet>

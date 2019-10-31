@@ -1,0 +1,42 @@
+<div style="max-width: 350px;min-width: 300px;">
+    <div (click)="tr(id)" class="team-boxrec" >
+            <div>
+                    <img src="{{image_path}}" style="width: 100%" alt="">
+            </div>
+
+            <div>
+                <strong><h4>{{recipe_name}}</h4></strong>
+            </div>
+
+
+
+            <div class="row" >
+                <div class="col-sm-4" style=" color: #78C257">
+                    <strong>{{cusine_name}}</strong>
+                </div>
+                  <div class="col-sm-4" style="text-align: center">
+                      <span class="lnr lnr-star" ></span><b> {{rating_value}}</b>
+    
+                  
+                </div>
+                     <div class="col-sm-4" style="text-align: end">
+                      <strong>{{duration}}</strong>
+    
+                  
+                </div>
+                  
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-6" style="text-align: left">
+                    <strong>Serve: {{serve}}</strong>
+                
+                </div>
+                <div class="col-sm-6" style="text-align: end">
+                  <b class="position" style="font-size: 14px;">{{master_name}}</b>
+                </div>
+
+            </div> 
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="card text-center" style="background: #CB202D;padding-top: 70px;" >
+   
+    <div class="card-header" style="background: #CB202D;text-align: center;color:white" >Thanks For Registering</div>
+    
+    <div class="card-body" style="background:white" >
+     <p style="text-align: center;color:#eb4653">Choose Your Favourite Cuisines</p>
+     <a href=*><p  style="text-align: right;color:#434345;">skip </p>
+      </a>
+      <form [formGroup]="recipeform" >
+        <div class="container">
+        <div class="row">
+       <div class="col-sm-3" *ngFor="let view of reposearch;let i=index">
+            <div class="card-header" style="background:#CB202D;; color:white" >{{view.recipe_type}}</div> 
+            <div class="card-body"  >                                  
+            <img src={{view.recipe_image}} class="rounded-circle" width="70%" height="120px">                        
+            
+       </div>    
+       <input type="checkbox" style="align-content: right" id={{i}} value="view" (change)="onChange(view,$event.target.checked)" >            
+    </div>
+    </div>
+    </div>
+    
+    <a  class="btn btn-primary"  style="margin:auto"  (click)="addfinal()">REGISTER</a>
+</form>
+    </div>
+</div>
+
+
+
+
+

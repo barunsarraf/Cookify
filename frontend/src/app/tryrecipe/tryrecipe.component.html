@@ -1,0 +1,99 @@
+<!-- Nav Bar -->
+<app-loggednavbar></app-loggednavbar>
+
+<!-- Head Section -->
+<section id="head-section">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-8">
+            <h1 style="color: #CB202D; text-align: center;">{{recipe.recipe_name}}</h1>
+            <h3 style="color: #eb4653; text-align: center;">{{recipe.cuisine}}</h3>
+            <br>
+            <form>
+                <label style="font-size: 2rem;">Number of people to serve : {{num}}</label>
+                <button id="plus-button" type="button" class="btn btn-dark"
+                    (click)="changeserve('minus')" data-type="minus" >
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <button id="minus-button" type="button" class="btn btn-dark"
+                    (click)="changeserve('plus')" data-type="minus">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button><br><br>
+                <label style="font-size: 2rem;">Estimated cooking time : {{recipe.duration}}</label>
+            </form>
+        </div>
+        <div class=col-lg-4>
+            <mat-card>
+                <img mat-card-image src={{recipe.recipe_image}} alt="Chicken Curry">	
+            </mat-card>
+        </div>
+        </div>
+    </div><br>
+
+</section>
+
+<!-- Ingredients and Procedure -->
+<section class="container">
+<mat-tab-group>
+    <mat-tab label="Ingredients">
+        <!-- Ingrediants Table -->
+            <h3 style="text-align: center; color: #CB202D; ">List of Ingredients</h3>
+            <table class="table table-striped table-bordered" id="itable" >
+                <thead class="thead-dark">
+                    <tr style="text-align: center;">
+                    <th scope="col">No.</th>
+                    <th scope="col">Ingredient</th>
+                    <th scope="col">Quantity Required</th>
+                    <th scope="col">Quantity In Hand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let ingredient of recipe.Ingredients; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{ingredient.ingredient_used}}</td>
+                    <td>{{ingredient.Quantity}}</td>
+                    <td>
+                        <input type="text" [(ngModel)]=igQuantity[i] placeholder="Enter the quantity of {{ingredient.ingredient_used}} in hand">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    
+            <!-- Order -->
+            <button (click)="orderval()" class="btn btn-success">Order</button>
+    </mat-tab>
+
+<!-- Procedure Stages -->
+    <mat-tab label="Procedure"><br>
+
+      <button [disabled]="isMainDisabled" type="button" class="btn btn-success" (click)='startTimer(0)'>Start Cooking</button><br><br>
+
+<!-- Stages Expansion Panel -->
+      <mat-accordion *ngFor="let stage of recipe.procedure; let j = index">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header style="background: #CB202D ;">
+            <mat-panel-title>
+              <h3 style="text-align: center; color: #ffff;">
+                {{stage.stageDescription}}
+              </h3>
+            </mat-panel-title>
+            <mat-panel-description style="color: #ffff; padding-top: 2rem; justify-content: flex-end;">
+              <strong>{{timeRem[j] | minuteSeconds}} minutes Left.... / {{stage.stageTime}}min</strong>
+            </mat-panel-description>
+          </mat-expansion-panel-header><br>
+          <ul *ngFor="let step of stage.steps; let i = index ">
+            <li> {{step.stepDescription}} </li>
+          </ul>
+          <button [disabled]="isStartDisabled" type="button" class="btn btn-outline-success" (click)='startTimer(j)' style="color: green;">Start Timer</button>
+          <button [disabled]="isPauseDisabled" type="button" class="btn btn-outline-danger" (click)='pauseTimer()' style="color: red;">Pause</button>
+        </mat-expansion-panel><br>
+      </mat-accordion>
+
+<!-- Navigate to rating  -->
+      <button type="button" class="btn btn-warning" >Cooking Done</button>
+    </mat-tab>
+</mat-tab-group>
+
+</section> <br><br> 
+
+<app-footer></app-footer>

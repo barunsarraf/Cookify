@@ -1,0 +1,16 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height:80%;
+}
+.p-t-20{
+  padding-top: 20px;
+}
+.p-b-20{
+  padding-bottom: 20px;
+}
+.p-t-5{
+  padding-top: 5px;
+}

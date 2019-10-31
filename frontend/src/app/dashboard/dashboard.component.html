@@ -1,0 +1,56 @@
+<!-- <app-trending></app-trending> -->
+<!-- 
+<app-dashboard-recommended></app-dashboard-recommended>
+<div class="service-box wow fadeInUp " data-wow-delay="0.2s" style="position: fixed; ">
+    <div class="plus">
+        <button [routerLink]="['/publish-recipe']"><span class="lnr lnr-plus-circle"></span></button>
+    </div>
+</div>
+
+
+
+<app-recommendedbyhistory></app-recommendedbyhistory>
+<app-master></app-master> -->
+
+
+<div class="container-fluid" style="margin-top: 60px;width: 100%;margin-right: 0;margin-left: 0;background: #FAFAFA">
+
+        <div class="sidenav" style="text-align: center">
+                <img style="width: 100%; align-self: center;margin-top: 20px;border-radius: 10px;" class="hoverup"  src="../../assets/homecomponentassets/images/men.jpeg" alt="profile image">
+                <label>{{username}}</label>
+                <div style="display: flex;flex-direction:column ">
+
+                        <button [ngx-scroll-to]="'#reccom'" mat-flat-button color="warn" style="margin-top: 5px; width:100%;background: #CB202D">Recommedation Recipe</button>
+                        <button [ngx-scroll-to]="'#trending'" mat-flat-button color="warn" style="margin-top: 5px;width: 100%;background: #CB202D">Trending Recipe</button>
+                        <button [ngx-scroll-to]="'#liked'" mat-flat-button color="warn" style="margin-top: 5px;width: 100%;background: #CB202D">Liked Recipe</button>
+
+                </div>
+              
+              
+              </div>
+              
+              <div class="main">
+                    <div id="reccom" style="display: flex; flex-direction: column;padding: 35px;margin-top: 30px;margin-right: 0px;">
+
+                        
+                            <app-recommeded></app-recommeded> 
+                      
+                             
+                    </div>
+                    <div id="trending" style="display: flex; flex-direction: column;padding: 35px;">
+                           
+                        <app-dashboardtrending></app-dashboardtrending>
+                          
+                    </div>
+                   
+                 </div>
+                      
+              </div>
+
+
+
+
+
+
+
+<app-footer></app-footer>

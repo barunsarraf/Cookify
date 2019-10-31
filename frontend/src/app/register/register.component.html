@@ -1,0 +1,161 @@
+<app-navbar></app-navbar>
+<div class="page-wrapper bg-red p-t-70 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h3 class="title">Register with cookify</h3>
+                    <form>
+                    <div class="row">
+                        <div class="col-5">
+                            <div>
+                                <mat-form-field class="example-full-width">
+                                    <input #name matInput placeholder="Name" name="name" [formControl]="nameFormControl"
+                                           [errorStateMatcher]="matcher">
+                                    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                    <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
+                                      Please enter your name
+                                    </mat-error> -->
+                                    <mat-error *ngIf="nameFormControl.hasError('required')">
+                                      Name is <strong>required</strong>
+                                    </mat-error>
+                                  </mat-form-field>
+                                <!-- <input #name class="input--style-2" type="text" placeholder="Name" formControlName="name" name="name" required> -->
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            
+                            <!-- <input #email class="input--style-2" type="text" placeholder="Email" formControlName="email" name="email" required> -->
+                            <mat-form-field class="example-full-width">
+                                <input #email matInput placeholder="Email" [formControl]="emailFormControl"
+                                        [errorStateMatcher]="matcher">
+                                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                    Please enter a valid email address
+                                </mat-error>
+                                <mat-error *ngIf="emailFormControl.hasError('required')">
+                                    Email is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                            
+                        </div>
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-5">
+                            <div>
+                                <!-- <input #username class="input--style-2" type="text" placeholder="UserName" formControlName="userName" name="UserName" required [pattern]="unamePattern"> -->
+                                <mat-form-field class="example-full-width">
+                                    <input #username matInput placeholder="UserName" name="userName" [formControl]="userNameFormControl"
+                                           [errorStateMatcher]="matcher">
+                                    <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                    <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
+                                      Please enter your name
+                                    </mat-error> -->
+                                    <mat-error *ngIf="userNameFormControl.hasError('required')">
+                                      Username is <strong>required</strong>
+                                    </mat-error>
+                                    <mat-error *ngIf="userNameFormControl.hasError('pattern')">
+                                            Username can only contain <strong>alphanumerics, underscores and hyphen</strong>
+                                          </mat-error>
+                                  </mat-form-field>
+                            </div>
+                            
+                        </div>
+                        <div class="col-5">
+                            <div>
+                                    <mat-form-field class="example-full-width">
+                                            <input type="password" #password matInput placeholder="Password" name="password" [formControl]="passwordFormControl"
+                                                   [errorStateMatcher]="matcher">
+                                            <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                            <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
+                                              Please enter your name
+                                            </mat-error> -->
+                                            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                              Password is <strong>required</strong>
+                                            </mat-error>
+                                          </mat-form-field>
+                                <!-- <input #password class="input--style-2" type="password" placeholder="Password" formControlName="password" name="Password" required> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div>
+                                    <mat-form-field class="example-full-width">
+                                            <input #city matInput placeholder="City" name="city" [formControl]="cityFormControl"
+                                                   [errorStateMatcher]="matcher">
+                                            <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                            <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
+                                              Please enter your name
+                                            </mat-error> -->
+                                            <mat-error *ngIf="cityFormControl.hasError('required')">
+                                              City is <strong>required</strong>
+                                            </mat-error>
+                                    </mat-form-field>
+                                <!-- <input #city class="input--style-2" type="text" placeholder="City" formControlName="city" name="city" required> -->
+                            </div>
+                        </div>
+                        <div class="col-5">
+                                <mat-form-field class="example-full-width">
+                                        <input #age matInput placeholder="Age" name="age" [formControl]="ageFormControl"
+                                               [errorStateMatcher]="matcher" >
+                                        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+                                        <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
+                                          Please enter your name
+                                        </mat-error> -->
+                                        <mat-error *ngIf="ageFormControl.hasError('required')">
+                                          Age is <strong>required</strong>
+                                        </mat-error>
+                                        <mat-error *ngIf="ageFormControl.hasError('pattern')">
+                                               Age can only be<strong> a number</strong>
+                                              </mat-error>
+                                </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div>
+                                    <input class="input--style-2" type="text" placeholder="State" name="state"  (mouseup)="getStateAndCountry($event,city.value)" value={{state}}>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                                <input class="input--style-2" type="text" placeholder="Country" name="country" disabled value={{country}}>
+                            <!-- <input #age class="input--style-2" type="text" placeholder="Age" name="age" formControlName="age"> -->
+                        </div>
+                    </div>
+                    <div class="row-space">
+                        <div>
+                            <label for="gender">Gender</label>
+                        </div>
+                        
+                        
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input #gender class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" checked="checked">Male
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input #gender class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female">Female
+                    </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input #gender class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="other">Other
+                    </label>
+                    </div>
+                        
+                        
+                    </div>
+                   <div>
+                        or signup using
+                        <a href="#fb">fb</a>&nbsp;
+                        <a href="#google">google</a>
+                    </div>
+                        <button class="btn btn--radius btn--green" type="submit" (click)="registerUser(name.value,email.value,username.value,password.value,city.value,age.value,gender.value)">Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

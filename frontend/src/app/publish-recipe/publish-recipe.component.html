@@ -1,0 +1,473 @@
+
+<div style="margin-top: 200px; margin-left: 10%; margin-right: 10%;">
+
+
+<!-- <img src=""/> -->
+
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button> -->
+  <mat-horizontal-stepper [linear]="false" #stepper>
+
+    <!-- First stage of recipe publishing -->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill recipe details</ng-template>
+
+                    <mat-form-field class="example-full-width" style="padding: 20px;" >
+                        <input #recipeName matInput placeholder="Name" formControlName="firstCtrl" required >
+                      </mat-form-field>
+                       <br/>
+                      <mat-form-field class="example-full-width" style="padding: 20px;">
+                        <textarea #description matInput placeholder="Description" formControlName="firstCtrl" required></textarea>
+
+                      </mat-form-field>
+                      <!-- <button>upload</button> -->
+                      <br/>
+                      <mat-form-field class="example-full-width" style="padding: 20px;">
+                        <input #cusine matInput placeholder="Cusine" >
+                      </mat-form-field>
+
+                      <mat-form-field style="padding: 20px;">
+                        <mat-label #course>Course</mat-label>
+                        <select #type matNativeControl required>
+                          <option value="starter">Starters</option>
+                          <option value="Main Course">Main Course</option>
+                          <option value="dessert">Dessert</option>
+                          <option value="beverage">Beverage</option>
+                        </select>
+                      </mat-form-field>
+                      <br/>
+                      <!-- <mat-form-field class="example-full-width" style="padding: 20px;">
+                        <input matInput placeholder="serves" >
+                      </mat-form-field> -->
+                      <div>
+                      <button class="btn btn--radius btn--green"  mat-button matStepperNext>Next</button>
+                      </div>
+                    </form>
+                </mat-step>
+
+
+        <!-- <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field> -->
+        <!-- <div>
+          <button mat-button matStepperNext class="btn btn--radius btn--green">Next</button>
+        </div> -->
+
+
+      <!--Second Stage of recipe publishing  -->
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Add Ingredients</ng-template>
+        <mat-form-field>
+          <input #serves matInput placeholder="serves" formControlName="secondCtrl" required>
+
+        </mat-form-field>
+        <!-- <div class="align-right">
+                <mat-chip-list aria-label="Fish selection">
+                        <mat-chip>One fish</mat-chip>
+                        <mat-chip>Two fish</mat-chip>
+                        <mat-chip color="primary" selected>Primary fish</mat-chip>
+                        <mat-chip color="accent" selected>Accent fish</mat-chip>
+                      </mat-chip-list>
+        </div> -->
+        <!-- Division for adding ingredients -->
+        <div>
+        <mat-form-field class="example-chip-list">
+                <mat-chip-list #chipList aria-label="Fruit selection">
+                  <mat-chip *ngFor="let ingredient of ingredients" [selectable]="selectable"
+                           [removable]="removable" (removed)="remove(ingredient)">
+                    {{ingredient.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New Ingredients..."
+                         [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+              </mat-form-field>
+
+            </div>
+
+            <!-- Ingredients addition finished -->
+
+            <!-- Add ingredients quantity  // table creation-->
+            <div style="overflow-x:auto;">
+            <table  *ngFor="let ingredient of ingredients" style="font-size:24px ">
+                <tr>
+                     <td>{{ingredient.name}}</td>
+                     <!-- <td style="padding-left: 20px;"><input #name style="width: 40px; border: 2px solid red;" placeholder={{ingredient.name}}></td> -->
+                     <td style="padding-left: 30px; width: 30% ;"><input #measurement type="number" class="form-control"  placeholder={{ingredient.measurement}} style=" min-width: 40px;"></td>
+                     <td style="padding-left: 40px; width: 30% ;"><!-- <input  style="width: 40px; border: 2px solid red;" placeholder={{ingredient.unit}}> -->
+                      <mat-form-field style="padding: 20px;">
+                          <mat-label >Course</mat-label>
+                          <select #unit matNativeControl required>
+                            <option value="tbs">tbs</option>
+                            <option value="bowl">bowl</option>
+                            <option value="gms">gms</option>
+                            <option value="kgs">kgs</option>
+                          </select>
+                        </mat-form-field>
+                    </td>
+                    <td style="width: 30% ;">
+                     <button type="submit" (click)="addIngredient(measurement.value,unit.value);enableDisableRule()" class="btn btn--radius btn--green" style="margin: 20px;" [ngClass]="{'red' : toggle, 'green': !toggle}">  {{status}}</button>
+                     </td>
+                 </tr>
+
+
+
+            </table>
+            </div>
+
+        <div>
+          <button mat-button matStepperPrevious class="btn btn--radius btn--green" style="padding: 10px; margin: 10px;">Back</button>
+          <button mat-button matStepperNext class="btn btn--radius btn--green" style="padding: 10px; margin: 10px;">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Section to write recipe procedure -->
+    <mat-step>
+      <ng-template matStepLabel>Recipe Procedure</ng-template>
+         <h3>Give Procedure for recipe</h3>
+              <a *ngIf="n==1 || n==2 || n==3 || n==4 || n==5 ">
+
+                <input #stageDesc matInput placeholder="stage Description">
+
+                <a  *ngFor="let link of links">
+                     {{link}}
+                     <!-- <div style="margin-left:20%"> -->
+                     <!-- <a *ngFor="let step of steps">
+                        <br/> {{step}}
+                        <input matInput placeholder="serves" >
+
+                      </a> -->
+                      <!-- <a *ngFor="let proce of processs">
+                          {{proce.processName}}
+
+                             <a *ngFor="let proc of proce.process">
+                          {{proc.processName}}
+                            </a> -->
+                            <!-- <input #step type="text" style="border: 2px solid red;">
+                            <button type="submit" (click)="addProcess(step.value)"> Add step</button>
+                        </a>  -->
+                      <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                          Add Stape
+                        </button> -->
+
+                    <!-- </div> -->
+
+                    <!-- <textarea #step type="text" style="border: 2px solid red;"></textarea> -->
+                    <mat-form-field class="example-full-width">
+                        <textarea #step matInput ></textarea>
+                      </mat-form-field>
+                    <button type="submit" (click)="addProcess(step.value);enableDisableRule1()" class="btn btn--radius btn--green" style="margin-left: 20px;" [ngClass]="{'red' : toggle1, 'green': !toggle1}">{{status1}}</button>
+                        <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                          <mat-icon>close</mat-icon>
+                        </button> -->
+
+
+
+                     <br/>
+
+
+
+
+
+                    </a>
+
+
+                <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+
+
+         <button mat-raised-button type="button" class="btn btn-warning" (click)="addLink();" style="margin:20px;" >
+                  <mat-icon style="padding-top: 5px;">add</mat-icon>
+              </button>
+
+
+            <button (click)="addStages(stageDesc.value);adda();" class="btn btn--radius btn--green"> <a *ngIf="a>0"> Stage Confirmed</a> <a *ngIf="a==0">  Confirm the Stage</a></button>
+
+            </a>
+
+
+            <br/>
+
+            <a *ngIf=" n==2 || n==3 || n==4 || n==5  ">
+
+                <input #stageDesc1 matInput placeholder="stage Description">
+
+
+              <a  *ngFor="let link of links1">
+                   {{link}}
+                   <!-- <div style="margin-left:20%"> -->
+                   <!-- <a *ngFor="let step of steps">
+                      <br/> {{step}}
+                      <input matInput placeholder="serves" >
+
+                    </a> -->
+                    <!-- <a *ngFor="let proce of processs">
+                        {{proce.processName}}
+
+                           <a *ngFor="let proc of proce.process">
+                        {{proc.processName}}
+                          </a> -->
+                          <!-- <input #step type="text" style="border: 2px solid red;">
+                          <button type="submit" (click)="addProcess(step.value)"> Add step</button>
+                      </a>  -->
+                    <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                        Add Stape
+                      </button> -->
+
+                  <!-- </div> -->
+
+                  <!-- <textarea #step type="text" style="border: 2px solid red;"></textarea> -->
+                  <mat-form-field class="example-full-width">
+                      <textarea #step1 matInput ></textarea>
+                    </mat-form-field>
+                  <button type="submit" (click)="addProcess1(step1.value);enableDisableRule1()" class="btn btn--radius btn--green" style="margin-left: 20px;" [ngClass]="{'red' : toggle1, 'green': !toggle1}">{{status1}}</button>
+                      <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                        <mat-icon>close</mat-icon>
+                      </button> -->
+
+
+
+                   <br/>
+
+
+
+
+
+                  </a>
+
+
+              <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+<!--
+          <button (click)="addStage()"></button> -->
+       <button mat-raised-button type="button" class="btn btn-warning" (click)="addLink1();" style="margin:20px;" >
+                <mat-icon style="padding-top: 5px;">add</mat-icon>
+            </button>
+
+
+            <button (click)="addStages1(stageDesc1.value);adda1();" class="btn btn--radius btn--green"><a *ngIf="a1>0"> Stage Confirmed</a> <a *ngIf="a1==0">  Confirm the Stage</a></button>
+
+          </a>
+
+          <br/>
+
+
+
+
+          <a *ngIf="n==3 || n==4 || n==5  ">
+
+              <input #stageDesc2 matInput placeholder="stage Description">
+
+
+            <a  *ngFor="let link of links2">
+                 {{link}}
+                 <!-- <div style="margin-left:20%"> -->
+                 <!-- <a *ngFor="let step of steps">
+                    <br/> {{step}}
+                    <input matInput placeholder="serves" >
+
+                  </a> -->
+                  <!-- <a *ngFor="let proce of processs">
+                      {{proce.processName}}
+
+                         <a *ngFor="let proc of proce.process">
+                      {{proc.processName}}
+                        </a> -->
+                        <!-- <input #step type="text" style="border: 2px solid red;">
+                        <button type="submit" (click)="addProcess(step.value)"> Add step</button>
+                    </a>  -->
+                  <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                      Add Stape
+                    </button> -->
+
+                <!-- </div> -->
+
+                <!-- <textarea #step type="text" style="border: 2px solid red;"></textarea> -->
+                <mat-form-field class="example-full-width">
+                    <textarea #step2 matInput ></textarea>
+                  </mat-form-field>
+                <button type="submit" (click)="addProcess2(step2.value);enableDisableRule1()" class="btn btn--radius btn--green" style="margin-left: 20px;" [ngClass]="{'red' : toggle1, 'green': !toggle1}">{{status1}}</button>
+                    <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                      <mat-icon>close</mat-icon>
+                    </button> -->
+
+
+
+                 <br/>
+
+
+
+
+
+                </a>
+
+
+            <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+
+
+     <button mat-raised-button type="button" class="btn btn-warning" (click)="addLink2();" style="margin:20px;" >
+             <mat-icon style="padding-top: 5px;">add</mat-icon>
+          </button>
+
+          <button (click)="addStages2(stageDesc2.value);adda2();" class="btn btn--radius btn--green"><a *ngIf="a2>0"> Stage Confirmed</a> <a *ngIf="a2==0">  Confirm the Stage</a></button>
+
+        </a>
+
+        <br/>
+
+
+
+
+        <a *ngIf=" n==4 || n==5  ">
+
+            <input #stageDesc3 matInput placeholder="stage Description">
+
+
+          <a  *ngFor="let link of links3">
+               {{link}}
+               <!-- <div style="margin-left:20%"> -->
+               <!-- <a *ngFor="let step of steps">
+                  <br/> {{step}}
+                  <input matInput placeholder="serves" >
+
+                </a> -->
+                <!-- <a *ngFor="let proce of processs">
+                    {{proce.processName}}
+
+                       <a *ngFor="let proc of proce.process">
+                    {{proc.processName}}
+                      </a> -->
+                      <!-- <input #step type="text" style="border: 2px solid red;">
+                      <button type="submit" (click)="addProcess(step.value)"> Add step</button>
+                  </a>  -->
+                <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                    Add Stape
+                  </button> -->
+
+              <!-- </div> -->
+
+              <!-- <textarea #step type="text" style="border: 2px solid red;"></textarea> -->
+              <mat-form-field class="example-full-width">
+                  <textarea #step3 matInput ></textarea>
+                </mat-form-field>
+              <button type="submit" (click)="addProcess3(step3.value);enableDisableRule1()" class="btn btn--radius btn--green" style="margin-left: 20px;" [ngClass]="{'red' : toggle1, 'green': !toggle1}">{{status1}}</button>
+                  <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                  </button> -->
+
+
+
+               <br/>
+
+
+
+
+
+              </a>
+
+
+          <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+
+
+   <button mat-raised-button type="button" class="btn btn-warning" (click)="addLink3();" style="margin:20px;" >
+            <mat-icon style="padding-top: 5px;">add</mat-icon>
+        </button>
+
+        <button (click)="addStages3(stageDesc3.value);adda3();" class="btn btn--radius btn--green"><a *ngIf="a3>0"> Stage Confirmed</a> <a *ngIf="a3==0">  Confirm the Stage</a></button>
+
+      </a>
+
+      <br/>
+
+
+
+
+      <a *ngIf=" n==5  ">
+
+          <input #stageDesc4 matInput placeholder="stage Description">
+
+
+        <a  *ngFor="let link of links4">
+             {{link}}
+             <!-- <div style="margin-left:20%"> -->
+             <!-- <a *ngFor="let step of steps">
+                <br/> {{step}}
+                <input matInput placeholder="serves" >
+
+              </a> -->
+              <!-- <a *ngFor="let proce of processs">
+                  {{proce.processName}}
+
+                     <a *ngFor="let proc of proce.process">
+                  {{proc.processName}}
+                    </a> -->
+                    <!-- <input #step type="text" style="border: 2px solid red;">
+                    <button type="submit" (click)="addProcess(step.value)"> Add step</button>
+                </a>  -->
+              <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                  Add Stape
+                </button> -->
+
+            <!-- </div> -->
+
+            <!-- <textarea #step type="text" style="border: 2px solid red;"></textarea> -->
+            <mat-form-field class="example-full-width">
+                <textarea #step4 matInput ></textarea>
+              </mat-form-field>
+            <button type="submit" (click)="addProcess4(step4.value);enableDisableRule1()" class="btn btn--radius btn--green" style="margin-left: 20px;" [ngClass]="{'red' : toggle1, 'green': !toggle1}">{{status1}}</button>
+                <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button> -->
+
+
+
+             <br/>
+
+
+
+
+            </a>
+
+
+
+
+        <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+
+
+ <button mat-raised-button type="button" class="btn btn-warning" (click)="addLink4()" style="margin:20px;" >
+          <mat-icon style="padding-top: 5px;">add</mat-icon>
+      </button>
+
+      <button (click)="addStages4(stageDesc4.value);adda4();" class="btn btn--radius btn--green"><a *ngIf="a4>0"> Stage Confirmed</a> <a *ngIf="a4==0">  Confirm the Stage</a></button>
+
+
+    </a>
+
+    <br/>
+
+
+
+            <button type="submit" (click)="addn();">Add Stage</button>
+
+
+
+              <!-- <button mat-raised-button class="example-action-button" (click)="addStep()">
+                          Submit Step
+                        </button> -->
+      <div>
+        <button mat-button matStepperPrevious class="btn btn--radius btn--green" style="padding: 10px;margin: 10px;">Back</button>
+        <button mat-button (click)="stepper.reset()" class="btn btn--radius btn--green" style="padding: 10px; margin: 10px;">Reset</button>
+        <button mat-button (click)="publishRecipe(recipeName.value, description.value,cusine.value,type.value,serves.value)" class="btn btn--radius btn--green"   style="padding: 10px; margin: 10px;" >Submit</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+
+
+</div>

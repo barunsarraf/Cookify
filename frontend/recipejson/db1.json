@@ -1,0 +1,794 @@
+{
+  "Recipe_details": [
+    {
+      "id": 1,
+      "publishedBy": "Stackroute",
+      "publishedOn": "27-05-2019",
+      "rating": 2.3,
+      "recipeName": "Momo",
+      "cookingTime": "20min",
+      "cuisine": "Indian",
+      "serves": 3,
+      "price": "100",
+      "comment":[],
+      "ratingList":[],
+      "courseType":"dinner",
+      "images": "../assets/homecomponentassets/images/image256.jpg",
+      "description": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "procedure": [
+        {
+          "stageDescription": "Sauce Making",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Fry Chicken",
+          "stageTime":"10",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Making Mayonnaise",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "published_by": "Stackroute",
+      "published_date": "27-05-2019",
+      "rating": 2.3,
+      "recipe_name": "Chicken",
+      "duration": "20min",
+      "cuisine": "Indian",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "procedure": [
+        {
+          "stageDescription": "Sauce Making",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Fry Chicken",
+          "stageTime":"10",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Making Mayonnaise",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "published_by": "Manoj",
+      "published_date": "27-05-2019",
+      "rating": 2.3,
+      "recipe_name": "Raita",
+      "duration": "20min",
+      "cuisine": "Chinese",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "procedure": [
+        {
+          "stageDescription": "Sauce Making",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Fry Chicken",
+          "stageTime":"10",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Making Mayonnaise",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "published_by": "Prashant",
+      "published_date": "27-05-2019",
+      "rating": 4.3,
+      "recipe_name": "Kichdi",
+      "duration": "2min",
+      "cuisine": "Chinese",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "procedure": [
+        {
+          "stageDescription": "Sauce Making",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Fry Chicken",
+          "stageTime":"10",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        },
+        {
+          "stageDescription": "Making Mayonnaise",
+          "stageTime":"5",
+          "steps": [
+            {
+              "stepDescription": "1 tablespoon. olive oil (or pan drippings)"
+            },
+            {
+              "stepDescription": "red wine, white wine, beer, cider or other flavorful alcohol."
+            },
+            {
+              "stepDescription": "3/4 cup. vegetable stock, chicken stock, or beef stock, plus extra as needed."
+            },
+            {
+              "stepDescription": "butter or a splash of cream"
+            },
+            {
+              "stepDescription": "Salt and pepper, to taste."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Published_Recipe": [
+    []
+  ],
+  "Trending_Recipe": [
+    {
+      "id": 1,
+      "published_by": "Stackroute",
+      "published_date": "27-05-2019",
+      "rating": 2.3,
+      "recipe_name": "Momo",
+      "duration": "20min",
+      "cuisine": "Indian",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "Procedure": [
+        {
+          "steps": "steps to follow"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "published_by": "Stackroute",
+      "published_date": "27-05-2019",
+      "rating": 2.3,
+      "recipe_name": "Momo",
+      "duration": "20min",
+      "cuisine": "Indian",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "Procedure": [
+        {
+          "steps": "steps to follow"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "published_by": "Manoj",
+      "published_date": "27-05-2019",
+      "rating": 2.3,
+      "recipe_name": "Raita",
+      "duration": "20min",
+      "cuisine": "Chinese",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "Procedure": [
+        {
+          "steps": "steps to follow"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "published_by": "Prashant",
+      "published_date": "27-05-2019",
+      "rating": 4.3,
+      "recipe_name": "Kichdi",
+      "duration": "2min",
+      "cuisine": "Chinese",
+      "serve_for": 3,
+      "price": "100",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg",
+      "descrition": "Chicken is marinated for several hours in a lemon juice, dahi (yogurt) and a mixture of Kashmiri red chilli, salt, garam masala and ginger garlic paste. The chicken is usually cooked in a tandoor (traditional clay oven), but may be grilled, roasted, or pan-fried. It is served in a mild curry sauce that includes butter.",
+      "Ingredients": [
+        {
+          "ingredient_used": "Peas",
+          "Quantity": "150 grams"
+        },
+        {
+          "ingredient_used": "chicken",
+          "Quantity": "1 kg"
+        },
+        {
+          "ingredient_used": "butter",
+          "Quantity": "100 grams"
+        },
+        {
+          "ingredient_used": "oil",
+          "Quantity": "200 ml"
+        },
+        {
+          "ingredient_used": "salt",
+          "Quantity": "2 tsp"
+        },
+        {
+          "ingredient_used": "chilli powder",
+          "Quantity": "3 tsp"
+        }
+      ],
+      "Procedure": [
+        {
+          "steps": "steps to follow"
+        }
+      ]
+    }
+  ],
+  "interestrecipes": [
+    {
+      "id": 1,
+      "recipe_type": "Italian",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 2,
+      "recipe_type": "Indian-Veg",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 3,
+      "recipe_type": "Chineese",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 4,
+      "recipe_type": "Indian-NonVeg",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 5,
+      "recipe_type": "Desserts",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 6,
+      "recipe_type": "Starters",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 7,
+      "recipe_type": "Drinks",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    },
+    {
+      "id": 8,
+      "recipe_type": "Snacks",
+      "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+    }
+  ],
+
+  "country":[
+    {
+        "id":1,
+        "city":"Bangalore",
+        "state":"Karnataka",
+        "country":"India"
+    },
+    {
+        "id":2,
+        "city":"Hyderabad",
+        "state":"Telengana",
+        "country":"India"
+    },
+    {
+        "id":3,
+        "city":"Mumbai",
+        "state":"Maharashtra",
+        "country":"India"
+    },
+    {
+        "id":4,
+        "city":"Kolkata",
+        "state":"West Bengal",
+        "country":"India"
+    }
+],
+  "Favourites_selected": [
+    {
+      "id": 2,
+      "recipe_type": "Indian-Veg",
+      "recipe_image": "../assets/indianveg.jpeg"
+    },
+    {
+      "id": 3,
+      "recipe_type": "Chineese",
+      "recipe_image": "../assets/chinese.jpeg"
+    },
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/indianveg.jpeg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/chinese.jpeg"
+      }
+    ],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "recipe_type": "Italian",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 7,
+        "recipe_type": "Drinks",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 8,
+        "recipe_type": "Snacks",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "recipe_type": "Italian",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [],
+    [],
+    []
+  ]
+}

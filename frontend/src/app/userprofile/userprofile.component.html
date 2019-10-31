@@ -1,0 +1,221 @@
+
+<div class="p-t-70">
+    <!-- <div class="container">
+            <div class="p-t-70">
+                    <mat-grid-list cols="5" rowHeight="200px">
+                    <mat-grid-tile [colspan]="2" [rowspan]="1">
+                        <img class="center" src="assets/blank-profile-picture-973460_640.png" alt="user image">
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="2">
+                        <mat-card>
+                            <mat-card-subtitle>Username:Rishabh Rajesh Dwivedi</mat-card-subtitle>
+                            <mat-card-subtitle>Name: {{user.name}}</mat-card-subtitle>
+                            <mat-card-subtitle>Age: {{user.age}}</mat-card-subtitle>
+                            <mat-card-subtitle>Gender: {{user.gender}}</mat-card-subtitle>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1">
+                            <mat-card>
+                                    <mat-card-subtitle>Preferred Cuisines</mat-card-subtitle>
+                                    <mat-chip-list>
+                                        <mat-chip *ngFor="let cuisines of user">North Indian</mat-chip>
+                                        <mat-chip>Chinese</mat-chip>
+                                        <mat-chip>Thai</mat-chip>
+                                        <mat-chip>Italian</mat-chip>
+                                    </mat-chip-list>
+                                </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                </div>
+    </div> -->
+    <div class="container">
+        
+        
+        <div class="row p-t-70">
+            <div class="col-sm-4">
+                <mat-card>
+                    <img class="center" src="{{user.image}}" alt="user image">
+                </mat-card>
+               
+                
+            </div>
+            <div class="col-sm-8">
+                <div class="p-t-5">
+                    <mat-card>
+                   <mat-card-subtitle>Username: {{user.userName}}</mat-card-subtitle>
+                   <mat-card-subtitle>Name: {{user.name}}</mat-card-subtitle>
+                   <mat-card-subtitle>Email:</mat-card-subtitle>
+                   
+                   <mat-card-subtitle><a href="#">Edit your Profile</a></mat-card-subtitle>
+               </mat-card>
+                </div>
+               
+               <div class="p-t-5">
+                   <mat-card>
+                    <mat-card-subtitle>Preferred Cuisines</mat-card-subtitle>
+                    <mat-chip-list>
+                        <mat-chip color="primary" *ngFor="let cuisines of user">North Indian</mat-chip>
+                        <mat-chip color="accent">Chinese</mat-chip>
+                        <mat-chip color="primary">Thai</mat-chip>
+                        <mat-chip color="accent">Italian</mat-chip>
+                    </mat-chip-list>
+                </mat-card>
+               </div>
+               
+            </div>
+        </div>
+        <!-- <div class="p-t-20 p-b-20">
+            <mat-card>
+                <mat-card-subtitle>Preferred Cuisines</mat-card-subtitle>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let cuisines of user">North Indian</mat-chip>
+                    <mat-chip>Chinese</mat-chip>
+                    <mat-chip>Thai</mat-chip>
+                    <mat-chip>Italian</mat-chip>
+                </mat-chip-list>
+            </mat-card>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="row">
+                <div class="col-sm-12 col-xs-12 p-t-70">
+                    <div class="page-title text-center">
+                        <h5 class="title">Recipes you have published</h5>
+                    </div>
+                </div>
+        </div>
+            <div
+                ng2-carouselamos
+                [width]="1000"
+                [items]=recipespublished
+                (onSelectedItem)="tr($event.item.id)"
+                [$item]="itemTemplate"
+                [$prev]="prevTemplate"
+                [$next]="nextTemplate" >
+            </div>
+            <div class="row m-t-30">
+                <div class="col-xs-12">
+                    <div class="team-slide">
+                        <ng-template #prevTemplate>
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="box-icon">
+                                    <i class="lnr lnr-chevron-left"></i>
+                                </div>
+                            </div>
+                        </ng-template>
+                    
+                        <ng-template let-item let-i="index" #itemTemplate >
+                          
+                            <app-recipecard style="background-color: white;" [id]="item.recipeId" [recipe_name]="item.recipeName" [image_path]="item.images" [cusine_name]="item.cuisine" [serve]="item.serves" [duration]="item.cookingTime" [published_on]="item.publishedOn" [master_name]="item.publishedBy" [rating_value]="item.rating" ></app-recipecard>
+                
+                        </ng-template>
+                        <ng-template #nextTemplate>
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="box-icon">
+                                    <i class="lnr lnr-chevron-right"></i>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+
+             
+            <div class="row">
+                    <div class="col-sm-12 col-xs-12 p-t-70">
+                        <div class="page-title text-center">
+                            <h5 class="title">Recipes you have tried</h5>
+                        </div>
+                    </div>
+            </div>
+                <div
+                    ng2-carouselamos
+                    [width]="1000"
+                    [items]=recipesliked
+                    (onSelectedItem)="tr($event.item.id)"
+                    [$item]="itemTemplate"
+                    [$prev]="prevTemplate"
+                    [$next]="nextTemplate" >
+                </div>
+                <div class="row m-t-30">
+                    <div class="col-xs-12">
+                        <div class="team-slide">
+                            <ng-template #prevTemplate>
+                                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="box-icon">
+                                        <i class="lnr lnr-chevron-left"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        
+                            <ng-template let-item let-i="index" #itemTemplate >
+                                    <app-recipecard style="background-color: white;" [id]="item.recipeId" [recipe_name]="item.recipeName" [image_path]="item.images" [cusine_name]="item.cuisine" [serve]="item.serves" [duration]="item.cookingTime" [published_on]="item.publishedOn" [master_name]="item.publishedBy" [rating_value]="item.rating" ></app-recipecard>
+                            </ng-template>
+                            <ng-template #nextTemplate>
+                                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="box-icon">
+                                        <i class="lnr lnr-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+              
+             <div class="row">
+                    <div class="col-sm-12 col-xs-12 p-t-70">
+                        <div class="page-title text-center">
+                            <h5 class="title">Recipes you have tried</h5>
+                        </div>
+                    </div>
+            </div>
+                <div
+                    ng2-carouselamos
+                    [width]="1000"
+                    [items]=recipestried
+                    (onSelectedItem)="tr($event.item.id)"
+                    [$item]="itemTemplate"
+                    [$prev]="prevTemplate"
+                    [$next]="nextTemplate" >
+                </div>
+                <div class="row m-t-30">
+                    <div class="col-xs-12">
+                        <div class="team-slide">
+                            <ng-template #prevTemplate>
+                                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="box-icon">
+                                        <i class="lnr lnr-chevron-left"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        
+                            <ng-template let-item let-i="index" #itemTemplate >
+                               
+                                <app-recipecard style="background-color: white;" [id]="item.id" [recipe_name]="item.recipeName" [image_path]="item.images" [cusine_name]="item.cuisine" [serve]="item.serves" [duration]="item.cookingTime" [published_on]="item.publishedOn" [master_name]="item.publishedBy" [rating_value]="item.rating" ></app-recipecard>
+                            </ng-template>
+                            <ng-template #nextTemplate>
+                                <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="box-icon">
+                                        <i class="lnr lnr-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+    </div> 
+</div>
+<app-footer></app-footer>
