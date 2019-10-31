@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-5">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput type="text" placeholder="State" name="state"  (mouseup)="getStateAndCountry($event,city.value)" value={{state}}>
+                                    <input matInput  #state type="text" placeholder="State" name="state"  (mouseup)="getStateAndCountry($event,city.value)" value={{state}}>
                                 </mat-form-field>
                         </div>
                         <div class="col-5">
@@ -117,7 +117,7 @@
                         <a href="#fb">fb</a>&nbsp;
                         <a href="#google">google</a>
                     </div>
-                        <button class="btn btn--radius btn--green" type="submit" (click)="registerUser(name.value,email.value,username.value,password.value,city.value,age.value,gender.value)">Next</button>
+                        <button class="btn btn--radius btn--green" type="submit" (click)="registerUser(name.value, state.value, email.value,username.value,password.value,city.value,age.value,gender.value)">Next</button>
                     </form>
                 </div>
             </div>

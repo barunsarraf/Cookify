@@ -10,8 +10,8 @@ import { FrontendserviceService } from './frontendservice.service';
 export class AppComponent {
   title = "music-frontend";
 
-  public shownav;
-  public loggedshownav;
+  public shownav=false;
+  public loggedshownav=false;
   private name;
 
   constructor(router:Router,private fservice:FrontendserviceService) {

@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   
   ngOnInit() {
   }
-  state ="";
+  state ="click";
   country="";
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -66,9 +66,15 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  registerUser(name,email,userName,password,city,age,gender)
+  registerUser(name,st,email,userName,password,city,age,gender)
   {
     console.log(name+email+userName+password+city+age+gender);
+
+    if(this.state=='click')
+    {
+     this.state= st;
+    }
+    
       var userObj={name:name,emailId:email,username:userName,password:password,city:city,state:this.state,country:this.country,age:age,gender:gender};
 
       var url="http://15.206.52.125:8080/userLogin/register";

@@ -790,6 +790,40 @@
     [],
     [],
     [],
-    []
+    [],
+    [
+      {
+        "id": 1,
+        "recipe_type": "Italian",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [],
+    [
+      {
+        "id": 6,
+        "recipe_type": "Starters",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "id": 2,
+        "recipe_type": "Indian-Veg",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      },
+      {
+        "id": 3,
+        "recipe_type": "Chineese",
+        "recipe_image": "../assets/homecomponentassets/images/image256.jpg"
+      }
+    ]
   ]
 }
