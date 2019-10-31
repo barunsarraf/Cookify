@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
     console.log(name+email+userName+password+city+age+gender);
       var userObj={name:name,emailId:email,username:userName,password:password,city:city,state:this.state,country:this.country,age:age,gender:gender};
 
-      var url="http://localhost:8080/userLogin/register";
+      var url="http://15.206.52.125:8080/userLogin/register";
       this.http.post(url,userObj).subscribe();
       this.router.navigateByUrl(`/selectyourinterests`);
   }

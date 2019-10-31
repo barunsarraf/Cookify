@@ -348,7 +348,7 @@ export class PublishRecipeComponent implements OnInit {
           servesFor:value5,
           images:[],
           price:0,
-          publishedBy:'',
+          publishedBy:localStorage.getItem('username'),
           rating:0,
 //           procedure:this.stage,
           procedure:this.procedure,

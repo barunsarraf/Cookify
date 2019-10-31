@@ -14,10 +14,9 @@
                                 <mat-error *ngIf="nameFormControl.hasError('required')">
                                     Name is <strong>required</strong>
                                 </mat-error>
-                                </mat-form-field>
+                            </mat-form-field>
                         </div>
                         <div class="col-5">
-                            
                             <mat-form-field class="example-full-width">
                                 <input #email matInput placeholder="Email" [formControl]="emailFormControl"
                                         [errorStateMatcher]="matcher">
@@ -28,22 +27,21 @@
                                     Email is <strong>required</strong>
                                 </mat-error>
                             </mat-form-field>
-                            
                         </div>
                     </div>
                  
                     <div class="row">
                         <div class="col-5">
-                                <mat-form-field class="example-full-width">
-                                    <input #username matInput placeholder="UserName" name="userName" [formControl]="userNameFormControl"
-                                           [errorStateMatcher]="matcher">
-                                    <mat-error *ngIf="userNameFormControl.hasError('required')">
-                                      Username is <strong>required</strong>
-                                    </mat-error>
-                                    <mat-error *ngIf="userNameFormControl.hasError('pattern')">
-                                            Username can only contain <strong>alphanumerics, underscores and hyphen</strong>
-                                          </mat-error>
-                                  </mat-form-field>
+                            <mat-form-field class="example-full-width">
+                                <input #username matInput placeholder="UserName" name="userName" [formControl]="userNameFormControl"
+                                        [errorStateMatcher]="matcher">
+                                <mat-error *ngIf="userNameFormControl.hasError('required')">
+                                    Username is <strong>required</strong>
+                                </mat-error>
+                                <mat-error *ngIf="userNameFormControl.hasError('pattern')">
+                                        Username can only contain <strong>alphanumerics, underscores and hyphen</strong>
+                                </mat-error>
+                            </mat-form-field>
                         </div>
                         <div class="col-5">
                             <mat-form-field class="example-full-width">
@@ -57,47 +55,37 @@
                     </div>
                     <div class="row">
                         <div class="col-5">
-                            <div>
-                                    <mat-form-field class="example-full-width">
-                                            <input #city matInput placeholder="City" name="city" [formControl]="cityFormControl"
-                                                   [errorStateMatcher]="matcher">
-                                            <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                                            <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
-                                              Please enter your name
-                                            </mat-error> -->
-                                            <mat-error *ngIf="cityFormControl.hasError('required')">
-                                              City is <strong>required</strong>
-                                            </mat-error>
-                                    </mat-form-field>
-                                <!-- <input #city class="input--style-2" type="text" placeholder="City" formControlName="city" name="city" required> -->
-                            </div>
+                            <mat-form-field class="example-full-width">
+                                <input #city matInput placeholder="City" name="city" [formControl]="cityFormControl"
+                                        [errorStateMatcher]="matcher">
+                                <mat-error *ngIf="cityFormControl.hasError('required')">
+                                    City is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
                         </div>
                         <div class="col-5">
-                                <mat-form-field class="example-full-width">
-                                        <input #age matInput placeholder="Age" name="age" [formControl]="ageFormControl"
-                                               [errorStateMatcher]="matcher" >
-                                        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-                                        <!-- <mat-error *ngIf="!nameFormControl.hasError('required')">
-                                          Please enter your name
-                                        </mat-error> -->
-                                        <mat-error *ngIf="ageFormControl.hasError('required')">
-                                          Age is <strong>required</strong>
-                                        </mat-error>
-                                        <mat-error *ngIf="ageFormControl.hasError('pattern')">
-                                               Age can only be<strong> a number</strong>
-                                              </mat-error>
-                                </mat-form-field>
+                            <mat-form-field class="example-full-width">
+                                <input #age matInput placeholder="Age" name="age" [formControl]="ageFormControl"
+                                        [errorStateMatcher]="matcher" >
+                                <mat-error *ngIf="ageFormControl.hasError('required')">
+                                    Age is <strong>required</strong>
+                                </mat-error>
+                                <mat-error *ngIf="ageFormControl.hasError('pattern')">
+                                        Age can only be<strong> a number</strong>
+                                </mat-error>
+                            </mat-form-field>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-5">
-                            <div>
-                                    <input class="input--style-2" type="text" placeholder="State" name="state"  (mouseup)="getStateAndCountry($event,city.value)" value={{state}}>
-                            </div>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput type="text" placeholder="State" name="state"  (mouseup)="getStateAndCountry($event,city.value)" value={{state}}>
+                                </mat-form-field>
                         </div>
                         <div class="col-5">
-                                <input class="input--style-2" type="text" placeholder="Country" name="country" disabled value={{country}}>
-                            <!-- <input #age class="input--style-2" type="text" placeholder="Age" name="age" formControlName="age"> -->
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="text" placeholder="Country" name="country" value={{country}}>
+                            </mat-form-field>
                         </div>
                     </div>
                     <div class="row-space">
